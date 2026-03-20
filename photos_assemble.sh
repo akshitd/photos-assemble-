@@ -67,7 +67,7 @@ while IFS= read -r -d '' file; do
     echo "Conflict: '$filename' → '$(basename "$dest")'"
   fi
 
-  mv "$file" "$dest"
+  cp "$file" "$dest"
   echo "Moved: $file → $dest"
   ((moved++))
 
